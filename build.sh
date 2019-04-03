@@ -8,6 +8,7 @@ mkdir -p workspace/celadon && pushd workspace/celadon
 #repo init -q -u https://github.com/projectceladon/manifest.git -m stable-build/ww201913.xml
 repo init -q -u file:///mnt/ws/cache/celadon_mirror/manifest.git -m stable-build/ww201913.xml
 repo sync -j $(nproc)
+unset CFLAGS CPPFLAGS CXXFLAGS LDFLAGS
 source build/envsetup.sh
 lunch celadon-userdebug
 make SPARSE_IMG=true project_celadon-efi -j $(nproc)
