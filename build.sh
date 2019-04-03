@@ -4,16 +4,16 @@ set -e
 export DEBIAN_FRONTEND noninteractive
 export TERM xterm
 
-sudo apt-get update
-sudo apt-get -y install apt-utils automake bc bison bsdmainutils build-essential \
+apt-get update
+apt-get -y install apt-utils automake bc bison bsdmainutils build-essential \
   bzip2 ccache chrpath cpio curl debianutils diffstat dosfstools dpkg-dev efitools \
   flex gawk gcc-multilib gettext git git-core g++-multilib gperf locales iputils-ping \
   libbz2-1.0 libbz2-dev libelf-dev libffi-dev libghc-bzlib-dev liblz4-tool libsdl1.2-dev \
   libssl-dev libxml2-utils lzop make maven mtools openjdk-8-jdk optipng pngcrush python \
   python-pip python3 python3-pexpect python3-pip python-mako python-networkx python-lxml \
   sbsigntool schedtool socat squashfs-tools texinfo unzip wget xz-utils zip zlib1g-dev xterm
-sudo pip install --upgrade pip
-sudo pip install pycrypto
+pip install --upgrade pip
+pip install pycrypto
 
 git config --global user.email "builder@user.com"
 git config --global user.name "builder"
